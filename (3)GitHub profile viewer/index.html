@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Viewer</title>
+</head>
+<link rel="stylesheet" href="css.css">
+<body>
+
+<button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+<!-- <button id="theme-change-btn" onclick="changeTheme()">Change Theme</button> -->
+
+<div id="profile-container">
+
+    <input type="text" id="username-input" placeholder="Enter GitHub Username">
+    <button id="submit-btn" onclick="getUserProfile()">Submit</button>
+    <img id="avatar" src="Avatar.jpg" alt="Avatar">
+    <div id="username"></div>
+    <div id="bio"></div>
+    <div id="repos"></div>
+
+    <div id="profile-link" onclick="openProfileLink()"></div>           <!--KHIKHIKHIKHI-->
+</div>
+
+<script src="js.js"></script>
+
+</body>
+</html>
