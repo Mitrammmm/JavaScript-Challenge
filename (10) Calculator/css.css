@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formstyle {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 87px;
+    height: 45px;
+    font-size: 18px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input:hover {
+    background-color: #45a049;
+}
+
+#finalanswer {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#clearbutton {
+    width: calc(100% - 15px);
+    height: 40px;
+    margin: 5px;
+    background-color: #f44336;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#clearbutton:hover {
+    background-color: #d32f2f;
+}
+
+
+.theme-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-button:hover {
+    background-color: #2980b9;
+}
+
+body.dark-theme {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-theme .formstyle {
+    background-color: #333;
+    border-color: #555;
+}
+
+.dark-theme input {
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-theme #finalanswer,
+.dark-theme #clearbutton {
+    border-color: #777;
+}
+

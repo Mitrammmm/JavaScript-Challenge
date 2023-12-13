@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="theme-button" onclick="toggleTheme()">🌃</div>
+    <div class="formstyle">
+        <form name="form">
+            <input id="finalanswer" name="answers" type="text" /> <br />
+
+            <input onclick="appendToAnswer('1')" type="button" value="1" />
+            <input onclick="appendToAnswer('2')" type="button" value="2" />
+            <input onclick="appendToAnswer('3')" type="button" value="3" /> <br />
+
+            <input onclick="appendToAnswer('4')" type="button" value="4" />
+            <input onclick="appendToAnswer('5')" type="button" value="5" />
+            <input onclick="appendToAnswer('6')" type="button" value="6" /> <br />
+
+            <input onclick="appendToAnswer('7')" type="button" value="7" />
+            <input onclick="appendToAnswer('8')" type="button" value="8" />
+            <input onclick="appendToAnswer('9')" type="button" value="9" /> <br />
+
+            <input onclick="appendToAnswer('+')" type="button" value="+" />
+            <input onclick="appendToAnswer('-')" type="button" value="-" />
+            <input onclick="appendToAnswer('/')" type="button" value="/" /> <br />
+
+            <input onclick="appendToAnswer('0')" type="button" value="0" />
+            <input onclick="appendToAnswer('*')" type="button" value="*" />
+            <input onclick="calculate()" type="button" value="=" /> <br />
+
+            <input id="clearbutton" onclick="clearAll()" type="button" value="Clear All" />
+        </form>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
