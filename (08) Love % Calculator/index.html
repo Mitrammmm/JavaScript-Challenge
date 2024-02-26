@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Love Calculator</title>
+</head>
+<body>
+    <div id="input-container">
+        <div id="name-inputs">
+            <label for="your-name">Your Name:</label>
+            <input type="text" id="your-name" placeholder="Your Name" required>
+                                       <br>
+            <label for="crush-name">Crush's Name:</label>
+            <input type="text" id="crush-name" placeholder="Crush's Name" required>
+        </div>
+
+        <button id="check-love">Check Love Score</button>
+    </div>
+
+    <div id="loading-screen" class="hidden">
+        <div class="loading-content">
+            <div class="heart-loader"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div id="result-container" class="hidden">
+        <p id="love-percentage"></p>
+        <p id="quote"></p>
+    </div>
+    <div id="gif-container"></div>
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffecf2; 
+}
+
+#input-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffb3d9; 
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff66b2; 
+    color: #ffffff; 
+    cursor: pointer;
+}
+
+#loading-screen, #result-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heart-loader {
+    width: 50px;
+    height: 50px;
+    background: url('heart-loader.gif') no-repeat center center;
+    background-size: contain;
+}
+
+#love-percentage {
+    font-size: 24px;
+    color: #ff66b2; 
+}
+
+#quote {
+    font-size: 18px;
+    color: #ff1a75; 
+}
+
+#gif-container {
+    margin-top: 20px;
+}
+
+#result-container {
+    background-color: #ffe6f2; 
+}
