@@ -7,26 +7,23 @@
     <title>Music Player</title>
 </head>
 <body>
-
     <div class="animation">
-    <div class="container">
-        <h1 style="font-family: cursive;"> kiko Music Player</h1>
-        <div class="song-info">
-            <span id="songName" style="font-family: cursive;">Song Name</span>
+        <div class="container">
+            <h1 style="font-family: cursive;">kiko Music Player</h1>
+            <div class="song-info">
+                <span id="songName" style="font-family: cursive;">Song Name</span>
+            </div>
+            <audio id="audio" class="audiosec" controls>
+                <source type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button id="playPause" style="background-color: hotpink;">Play</button>
+            <button id="stop" style="background-color: red;">Stop</button>
+            <button id="prev" style="background-color: black;">Previous</button>
+            <button id="next" style="background-color: blue;">Next</button>
+            <label for="upload">Upload a song to Play here</label>
+            <input type="file" id="upload" accept="audio/*" style="margin-top: 20px;">
         </div>
-
-
-        <audio id="audio" class="audiosec" controls>
-            <source  type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <button id="playPause" style="background-color: hotpink;">Play</button>
-        <button id="stop" style="background-color: red;">Stop</button>
-        <button id="prev" style="background-color: black;">Previous</button>
-        <button id="next" style="background-color: blue;">Next</button>
-   
-
-    </div>
     </div>
     <script src="js.js"></script>
 </body>
