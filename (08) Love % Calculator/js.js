@@ -10,10 +10,90 @@ document.getElementById('check-love').addEventListener('click', () => {
     showLoadingScreen();
 
     setTimeout(() => {
-        const lovePercentage = Math.floor(Math.random() * 101);
+        // const lovePercentage = Math.floor(Math.random() * 101);
+
+        let lovePercentage = 0;
+
+        // Helper functions
+        const getSurname = (name) => name.split(" ").slice(1).join(" ");
+        const countVowels = (name) => (name.match(/[aeiouAEIOU]/g) || []).length;
+        const countConsonants = (name) => (name.match(/[^aeiouAEIOU\s]/g) || []).length;
+        const asciiSum = (name) => name.split("").reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
+        const matchingCharsPercentage = (a, b) => {
+            let matches = 0;
+            for (let i = 0; i < Math.min(a.length, b.length); i++) {
+                if (a[i].toLowerCase() === b[i].toLowerCase()) matches++;
+            }
+            return (matches / Math.max(a.length, b.length)) * 30;
+        };
+    
+        // First Name Same +10
+        if (yourName.split(" ")[0].toLowerCase() === crushName.split(" ")[0].toLowerCase()) {
+            lovePercentage += 10;
+        } else {
+            lovePercentage += 5;
+        }
+    
+        // Surname Same +10
+        if (getSurname(yourName).toLowerCase() === getSurname(crushName).toLowerCase()) {
+            lovePercentage += 10;
+        } else {
+            lovePercentage += 3;
+        }
+    
+        // Name Length Same +10
+        if (yourName.length === crushName.length) {
+            lovePercentage += 10;
+        } else {
+            lovePercentage += 5;
+        }
+    
+        // Starting Letter Same +7
+        if (yourName[0].toLowerCase() === crushName[0].toLowerCase()) {
+            lovePercentage += 7;
+        } else {
+            lovePercentage += 3;
+        }
+    
+        // Ending Letter Same +5
+        if (yourName.slice(-1).toLowerCase() === crushName.slice(-1).toLowerCase()) {
+            lovePercentage += 5;
+        } else {
+            lovePercentage += 2;
+        }
+    
+        // Same Number of Vowels +8
+        if (countVowels(yourName) === countVowels(crushName)) {
+            lovePercentage += 8;
+        } else {
+            lovePercentage += 4;
+        }
+    
+        // Same Number of Consonants +7
+        if (countConsonants(yourName) === countConsonants(crushName)) {
+            lovePercentage += 7;
+        } else {
+            lovePercentage += 3;
+        }
+    
+        // ASCII Sum Same +8
+        if (asciiSum(yourName) === asciiSum(crushName)) {
+            lovePercentage += 8;
+        } else {
+            lovePercentage += 4;
+        }
+    
+        // Matching Characters Percentage (up to 30)
+        lovePercentage += matchingCharsPercentage(yourName, crushName);
+    
+        // Cap the percentage at 100
+        lovePercentage = Math.min(Math.round(lovePercentage), 100);
+    
         displayLoveResult(lovePercentage);
     }, 6000);
 });
+
+
 
 function showLoadingScreen() {
     document.getElementById('input-container').classList.add('hidden');
